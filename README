@@ -1,12 +1,17 @@
 VisualSWF contains several targets:
+
 1. VisualSWF (SWF File Format Visualizer)
-http://rintarou.dyndns.org/2011/02/09/visualswf-1-0/
+   http://rintarou.dyndns.org/2011/02/09/visualswf-1-0/
 2. F2C (swf to canvas converter which is on Mac App Store)
-http://rintarou.dyndns.org/f2c/
+   http://rintarou.dyndns.org/f2c/
+   http://itunes.apple.com/us/app/f2c/id418700584?mt=12&ls=1#
 3. swfparser
-a simple swf parser written in C++ and depends on libz only.
+   A simple swf parser written in C++ and depends on libz only.
 
 License:
 
-All code are under GPL license but there is another commercial license if you prefer(contact: shuho.chou@gmail.com).
+  All code are under GPL license but there is another commercial license if you prefer.
 
+Contact:
+
+  shuho.chou@gmail.com
