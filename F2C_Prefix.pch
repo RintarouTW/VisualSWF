@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'VisualSWF' target in the 'VisualSWF' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
+
+#define F2C
+//#define LITE_VERSION
+//#define DEV_MODE

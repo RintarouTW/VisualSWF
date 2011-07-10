@@ -1,0 +1,534 @@
+/*
+ * Global 
+ */
+
+body {
+	-webkit-user-select: none;
+    color : #ffffff;
+    text-shadow : 1px 1px 2px #000000;
+    background-image: -webkit-gradient(
+        linear,
+        right top,
+        right bottom,
+        color-stop(0, rgb(13,14,15)),
+        color-stop(0.02, rgb(33,34,35)),
+        color-stop(0.73, rgb(53,54,55)),
+        color-stop(0.95, rgb(23,24,25))
+    );
+}
+
+/*** Scroll Bar ***/
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+    
+    background-image: -webkit-gradient(
+        linear,
+        right bottom,
+        right top,
+        color-stop(0, rgb(23,24,25)),
+        color-stop(1, rgb(23,24,25))
+    );
+
+}
+
+::-webkit-scrollbar-thumb {
+    border-width: 6px;
+    border-radius: 5px;
+    min-height: 20px;
+    max-height: 20px;
+
+    background-image: -webkit-gradient(
+        linear,
+        right top,
+        right bottom,
+        color-stop(0, rgb(65,65,65)),
+        color-stop(1, rgb(65,65,65))
+    );
+}
+
+div {
+    /*padding: 3px; */
+}
+
+table td {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    border: 1px solid #353637;
+}
+
+table tr {
+    border-top: 1px solid #353637;
+}
+
+table {	
+    border-collapse: collapse;
+    -webkit-border-radius: 4px;
+    font: normal 11px verdana, arial, helvetica, sans-serif;
+    color: #F6ECF0;
+    vertical-align:middle;
+    width:auto;
+    
+    background-image: -webkit-gradient(
+        linear,
+        right bottom,
+        right top,
+    color-stop(0.46, rgb(33,34,35)),
+    color-stop(0.73, rgb(43,44,45)),
+    color-stop(0.87, rgb(33,34,35))
+    );
+    
+    -webkit-box-shadow: 3px 3px 4px #000000;    
+}
+
+select {
+	margin: 0px 2px 0px 2px;
+	width: 130px;
+	background-color: #353637;
+	border: 1px solid #454647;
+	color: #ffffff;
+}
+
+/* Input Text */
+input.F2CInputText {
+	margin: 0px 2px 0px 2px;
+	width: 34px;
+	background-color: #353637;
+	border: 1px solid #454647;
+	color: #ffffff;
+}
+
+/*** Button Classes ***/
+
+
+input.btnDown {
+	margin: 3px 3px 3px 3px;
+	-webkit-border-radius: 5px;
+    color: #dcff00;
+    font: normal 10px verdana, arial, helvetica, sans-serif;
+    background-image: -webkit-gradient(
+        linear,
+        right top,
+        right bottom,
+        color-stop(0.1, rgb(23,24,25)),
+        color-stop(0.9, rgb(23,24,25))
+    );
+    border-top: 1px solid #454647;
+    border-left: 1px solid #454647;
+    border-right: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+input.btnHover {
+	margin: 3px 3px 3px 3px;
+	-webkit-border-radius: 5px;
+    color: #ffffff;
+    font: normal 10px verdana, arial, helvetica, sans-serif;
+    background-image: -webkit-gradient(
+        linear,
+        right top,
+        right bottom,
+        color-stop(0.1, rgb(63,64,65)),
+        color-stop(0.9, rgb(13,14,15))
+    );
+    border-top: 1px solid #aaaaaa;
+    border-left: 1px solid #aaaaaa;
+    border-right: 1px solid #454647;
+    border-bottom: 1px solid #454647;
+}
+
+input.btn {
+	margin: 3px 3px 3px 3px;
+	-webkit-border-radius: 5px;
+    color: #a1a2a3;
+    font: normal 10px verdana, arial, helvetica, sans-serif;
+    background-image: -webkit-gradient(
+        linear,
+        right top,
+        right bottom,
+        color-stop(0.1, rgb(13,14,15)),
+        color-stop(0.9, rgb(63,64,65))
+    );
+    border-top: 1px solid #555657;
+    border-left: 1px solid #555657;
+    border-right: 1px solid #252627;
+    border-bottom: 1px solid #252627;
+}
+
+/*** Specific Element ***/
+
+#WorkingArea {
+	visibility: hidden;
+	position: fixed;
+	box-align: center;
+	top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    width: 100%;
+    height: 100%;
+    
+    overflow:auto;
+    vertical-align: middle;
+}
+
+
+#DebugBoxContainer {
+    position: fixed;
+    overflow: auto;
+    opacity: 0.9;
+    text-shadow : 1px 1px 2px #000000;
+    background-image: -webkit-gradient(
+        linear,
+        right bottom,
+        right top,
+        color-stop(0.46, rgb(83,44,89)),
+        color-stop(0.73, rgb(111,57,120)),
+        color-stop(0.87, rgb(121,64,125))
+    );
+    width: 80%;
+    height: 20%;    
+    bottom: 10px;
+    -webkit-box-shadow: 3px 3px 4px #000000;
+}
+
+#DebugBox {
+    width: 90%;
+    height: 90%;
+}
+
+#InfoBox {
+	opacity:0.9;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    -webkit-transition: top .7s ease-in;
+}
+
+/*
+#screen {
+    -webkit-box-shadow: 3px 3px 4px #000000;
+    background-color: #333333;
+}
+*/
+
+
+.Tab {
+	position: absolute;
+	-webkit-border-radius: 0px;
+	visibility: hidden; /* default all hidden, set visibile by the program. */
+}
+
+
+/*
+ * View 
+ */
+
+/* Specific Elements */
+
+#F2CSceneView {
+    -webkit-border-radius: 5px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+#F2CCastView {
+    -webkit-border-radius: 5px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+
+/* Table View Classes */
+
+.RenamingTextField {
+	background-color: #353637;
+	border: 0px solid #454647;
+	color: #ffffff;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;	
+}
+
+.F2CPanelView {
+	opacity:0.9;
+	z-index: 2;
+    padding: 1px 1px 1px 1px;
+    -webkit-box-orient: vertical;
+
+    min-width: 150px;
+    
+    border-top: 1px solid #555657;
+    border-left: 1px solid #555657;
+    background-image: -webkit-gradient(
+        linear,
+        right top,
+        right bottom,
+        color-stop(0.1, rgb(33,34,35)),
+        color-stop(0.9, rgb(33,34,35))
+    );
+    -webkit-box-shadow: 3px 3px 4px #000000;
+    
+    /* animation test (TODO) */
+    -webkit-transition: height .3s ease-in;
+}
+
+
+.F2CPanelViewLabel {
+    color: #dcff00;
+    border: 0px;
+    font: normal 13px verdana, arial, helvetica, sans-serif;
+    background-image: -webkit-gradient(
+        linear,
+        right top,
+        right bottom,
+        color-stop(0, rgb(33,34,35)),
+        color-stop(1, rgb(43,44,45))    
+    );
+    text-align: center;
+}
+
+.F2CPanelViewLabel td {
+	border: 0px;
+}
+
+.F2CPanelViewLabel tr {
+	border: 0px;
+}
+
+
+.F2CPanelViewTableContainer {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 500px;
+    box-orient: vertical;
+}
+
+
+.F2CTableView {
+	-webkit-box-shadow: none;
+	background-image: none;
+}
+
+
+
+/* Table Item View Classes */
+
+.F2CTableItemView {
+    position:relative;
+    cursor: pointer;    
+    padding: 6px;
+    -webkit-box-orient: horizontal;
+    -webkit-transition-property: background-color border-color;
+    -webkit-transition-duration: .3s;
+    height: 28px;
+    border-top: 1px solid #353637;
+    border-left: 1px solid transparent;
+}
+
+.F2CTableItemView td {
+	border: 0px;
+}
+
+.F2CTableItemIcon {
+	padding: 0px;
+	margin: 0px;
+	-webkit-user-drag: element;
+}
+
+.F2CTableItemLabel {
+	margin: 0px;
+	padding: 0px;
+}
+
+.F2CTableItemDeleteIcon {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Slider View */
+
+.F2CSliderView {
+	margin-left: 5px;
+	margin-top: 1px;
+	padding: 0px;
+	border: 1px solid #454647;
+	background-color: #353637;
+	width: 100px;
+	height: 8px;
+	left: 0px;
+	float: right;
+	border-radius: 2px;
+	position: relative;
+}
+
+.F2CSliderViewSlider {
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #cccccc;
+	background-color: #353637;
+	width: 8px;
+	height: 6px;
+	border-radius: 3px;
+	left: 0px;
+	position: relative;
+}
+
+/* Color Style */
+
+.F2CColorInput {
+	width: 60px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: #353637;
+	border: 1px solid #454647;
+	color: #ffffff;
+}
+
+.F2CColorRect {
+	border: 1px solid #353637;
+	width: 20px;
+	height: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/*
+ * Export 
+ */
+
+.F2CExportBox {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 3;
+    box-align: center;
+    position: fixed;
+    top:  0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    /* center */
+    width: 100%;
+    height: 100%;
+    
+    overflow:auto;
+    
+    background-image: -webkit-gradient(
+        linear,
+        right bottom,
+        right top,
+        color-stop(0.3, rgb(40,40,40)),
+        color-stop(0.65, rgb(40,40,40)),
+        color-stop(0.83, rgb(40,40,40))
+    );
+
+    vertical-align: middle;
+    border: 1px solid #000000;
+
+    /* animation */
+    -webkit-transition: opacity .4s ease-out; /* ease-in; */
+}
+
+.F2CExport {
+    width: 80%;
+    height: 60%;
+}
+
+.F2CExportLayoutContainer {
+    width: 60%;
+    height: 70%;
+    overflow: auto;    
+    padding: 0px;
+    position: fixed;
+}
+
+.F2CExportNumBytes {
+    color: #dcff00;
+	font: normal 10px verdana, arial, helvetica, sans-serif;
+}
+
+.F2CExportExampleUsage {
+	font: normal 11px verdana, arial, helvetica, sans-serif;
+}
+
+/*
+ *	Character Editor
+ */
+#F2CCharacterEditPanel {
+	visibility: hidden;	/* default hidden */
+	z-index: 2;
+	opacity:0.9;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
+.F2CCharacterEditorView {
+	visibility: hidden;	/* default hidden */
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 400px;
+	height: 300px;
+	margin-left: 0px;
+	margin-top:0px;
+	padding: 0px;
+	border: 1px dashed #ffffff;
+	-webkit-border-radius: 0px;
+	-webkit-box-shadow: 3px 3px 4px #000000;
+}
+
+.F2CCharacterEditorViewBounds {
+	position: relative;
+	padding: 0px;
+}
+
+.F2CCharacterEditorCanvas {
+	border: 0px solid #ffffff;
+}
+
+.F2CCharacterEditorAnchor {
+	visibility: hidden;
+	z-index: 2;
+	padding: 0px;
+	margin: 0px;
+	cursor: move;
+	position: fixed;
+	left: 0px;
+	top: 0px;	
+	width: 15px;
+	height: 15px; 
+	border: 0px solid #ffffff;
+	-webkit-border-radius: 0px;
+	background-image: url(lib/jscolor/cross.gif);
+}
+
+.F2CCharacterEditorResizer {
+	cursor: se-resize;
+	position: fixed;
+	left: 0px;
+	top: 0px;	
+	width: 5px;
+	height: 5px;
+	border: 0px solid #ffffff;
+	-webkit-border-radius: 0px;	
+	/*
+	background-image: -webkit-gradient(
+        linear,
+        right top,
+        right bottom,
+        color-stop(0.1, rgb(23,24,25)),
+        color-stop(0.9, rgb(23,24,25))
+    );*/
+}
+
+/********************* End ********************/

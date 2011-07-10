@@ -1,0 +1,69 @@
+<html>
+<head>	
+	<title>Canvas Drawing in Webkit</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />    
+
+    <link type="text/css" href="canvasPreview.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="F2C.js"></script>
+    
+	<script type="text/javascript">
+	
+        var castController;			/* Cast Controller */
+        var actorViewerController;	/* Actor Viewer Controller */
+        var infoBoxController;
+		var secenController;
+		                
+        function init() {        
+        	infoBoxController		= new F2CInfoBoxController();        	
+        	actorViewerController 	= new F2CActorViewerController(infoBoxController);
+            castController 			= new F2CCastController(actorViewerController, "castController");
+
+			if (F2CDebugger) {
+				debugInit();
+			}
+
+            document.body.appendChild(actorViewerController.view);
+            document.body.appendChild(castController.view);
+            document.body.appendChild(infoBoxController.view);
+                        
+            /* Scene & Character Editor */
+            characterEditorController = new F2CCharacterEditorController(castController);
+            secenController = new F2CSceneController(castController, characterEditorController, "secenController");
+            document.body.appendChild(secenController.view);
+            
+            jscolor.preload();
+            if (!F2CDebugger) {
+            	switchTab(0);
+            }
+        }
+
+        function switchTab(tabNum) {
+        	switch (tabNum) {
+        		case 0:	/* Cast Tab */
+        			actorViewerController.setVisible(true);
+        			infoBoxController.setVisible(true);
+        			characterEditorController.setVisible(false);
+        			secenController.setVisible(false);
+        		break;
+        		case 1:	/* Scene Tab */
+        			actorViewerController.setVisible(false);
+        			infoBoxController.setVisible(false);
+        			
+        			characterEditorController.setVisible(true);
+        			secenController.setVisible(true);
+        		break;
+        	}
+        	return tabNum;
+        }
+        
+	</script>
+</head>
+
+<body onload="init();">
+
+<div id="WorkingArea"></div>
+
+</body>
+</html>
